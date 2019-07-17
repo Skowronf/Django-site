@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="col-5" style="margin-left: 30%">
+        <div class="gallery">
+            <a href="#" class="mr-2">{{ object.author }}</a>
+            <small class='text-muted'>{{object.date_posted|date:"F d, Y" }} </small>
+            <h2 class="article-title">{{ object.title }}</h2>
+            <p class='article-content'>{{ object.content }}</p>
+                <img class='img-fluid rounded' src="{{ object.image.url }}">
+        </div>
+    </div>
+{% endblock %}
